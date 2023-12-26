@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardNaviCarShop.AddType">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Название типа:"/>
+            <Entry Text="{Binding Name}"/>
+
+            <Button Text="Добавить" Clicked="Add"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardNaviCarShop.PageCars">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontSize="20" Text="Выберите машину для редактирования:"
+    HorizontalOptions="CenterAndExpand"/>
+            <CollectionView Margin="10" ItemsSource="{Binding Cars}" ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="18" Text="{Binding Name}"/>
+                            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="18" Text="{Binding Price}"/>
+                            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="18" Text="{Binding Info}"/>
+                            <Button Margin="10" Text="Редактировать" Clicked="EditCar"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Добавить новую" Clicked="Add"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
